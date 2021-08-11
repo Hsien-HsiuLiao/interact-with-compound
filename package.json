@@ -1,0 +1,23 @@
+{
+  "name": "interact-with-compound",
+  "version": "1.0.0",
+  "description": "You can lend and borrow ERC-20 tokens on Compound. Value of collateral tokens must greater than value of borrowed tokens",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hsien-HsiuLiao/interact-with-compound.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hsien-HsiuLiao/interact-with-compound/issues"
+  },
+  "homepage": "https://github.com/Hsien-HsiuLiao/interact-with-compound#readme"
+}
