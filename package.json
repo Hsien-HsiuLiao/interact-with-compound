@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Hsien-HsiuLiao/interact-with-compound/issues"
   },
-  "homepage": "https://github.com/Hsien-HsiuLiao/interact-with-compound#readme"
+  "homepage": "https://github.com/Hsien-HsiuLiao/interact-with-compound#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.2.1-solc-0.7"
+  }
 }
