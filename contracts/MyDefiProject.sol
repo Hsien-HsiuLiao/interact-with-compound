@@ -3,11 +3,11 @@ pragma solidity ^0.7.3;
 import '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 import './CTokenInterface.sol';
 import './ComptrollerInterface.sol';
-import './PriceOracle.sol';
+import './PriceOracleInterface.sol';
 
 contract MyDefiProject {
     ComptrollerInterface public comptroller;
-    PriceOracelInterface public priceOracle;
+    PriceOracleInterface public priceOracle;
 
     constructor(
         address _comptroller,
@@ -32,7 +32,7 @@ contract MyDefiProject {
 
  //once you have your cToken, 
  //you want to redeem it against the underlying token that you initially lent plus interest
-function redeem(address CTokenAddress, uint cTokenAmount) external {
+function redeem(address cTokenAddress, uint cTokenAmount) external {
     CTokenInterface cToken = CTokenInterface(cTokenAddress);
     uint result = cToken.redeem(cTokenAmount);
      require(
@@ -75,7 +75,7 @@ function repayBorrow(address cTokenAddress, uint underlyingAmount) external {
     );
 }
 
-functiongetMaxBorrow(address cTokenAddress) external view returns(uint) {
+function getMaxBorrow(address cTokenAddress) external view returns(uint) {
     (uint result, uint liquidity, uint shortfall) = comptroller.getAccountLiquidity(address(this));
     require(
         result == 0, 
